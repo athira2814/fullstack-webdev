@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>css</title>
+    <title>card assignment</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            margin: 10px;
         }
-        div.parent{
-            background-color: black;
-            min-height: 200px;
+
+        .card {
+            background-color: #f4f1de;
+            text-align: center;
+            margin-top: 20px;
+            height: 400px;
+            width: 350px;
+            position: relative;
+            left: 30%;
+            border-radius: 20px;
         }
-        div.child{
-            background-color: orange;
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            transition-duration: 0.5s;
-            /* transition-timing-function: ease-in; */
-            transition-timing-function: cubic-bezier(0.02, 1.4, 1,-0.67);
+
+        img {
+            width: 350px;
+            border-radius: 20px;
+            position: absolute;
+            left: 0;
         }
-        div.parent:hover div.child{
+
+        .date {
+            position: absolute;
             background-color: red;
-            /* transform: rotateY(90deg); */
-            /* transform: scale(0.4); */
-            transform: translatex(900px);
- 
+            border-radius: 100%;
+            color: white;
+            right: 10px;
+            top: 20px;
+            padding: 6px 3px;
+        }
+
+        h1 {
+            top: 53%;
+            position: absolute;
+            left: 40%;
+        }
+        p{
+            position: absolute;
+            top: 65%;
+        }
+        button{
+            position: absolute;
+            bottom: -7px;
+            left: 38%;
+            color: white;
+            background-color: red;
+            border-radius: 8px;
+            letter-spacing: 1.5px;
+            padding: 5px 5px 3px 10px;
+            border: none;
         }
     </style>
 </head>
+
 <body>
-    <div class="parent">
-        <div class="child"></div>
+    <div class="card">
+        <img src="https://www.independent.ie/incoming/7f190/36414484.ece/AUTOCROP/w1240/SN%20PARIS.jpg"
+            alt="image of paris">
+        <h1>Paris</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
+            eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
+            eius!</p>
+        <button type="button">visit paris</button>
+        <div class="date">11 <sup>th</sup></div>
+
     </div>
 </body>
+
 </html>
