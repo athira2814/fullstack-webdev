@@ -12,42 +12,29 @@
             box-sizing: border-box;
             margin: 10px;
         }
-        h2{
+        h2:nth-child(1){
             padding: 5px;
             color: white;
             background-color: orange;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
         }
+        h2:nth-child(2){
+            padding: 5px;
+            color: white;
+            background-color: orange;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
+        }
+
         h2:hover{
             background-color: crimson;
             cursor: pointer;
-        }
-        div::selection{
-            background: lime;
-        }
-        input:focus{
-            background-color: pink;
-            color: red;
-        }
-        h2::after{
-            content: "im after";
-            color: red;
-            position: relative;
-            top: 5px;
-            font-size: 0.9rem;
-        }
-        h2::before{
-            content: "im before";
-            color: red;
-            position: relative;
-            top: 5px;
-            font-size: 0.9rem;
-
         }
     </style>
 </head>
 <body>
     <h2>heading</h2>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid assumenda rem nam dolores iure rerum, adipisci nisi minima ipsam accusamus. Incidunt, molestiae? Mollitia voluptatum magnam veritatis ut ipsum sed laboriosam dolore quo numquam doloribus! Sequi dolore doloremque fuga laudantium ad adipisci illo ea doloribus aspernatur eveniet? Nulla sint molestias recusandae natus, necessitatibus neque eaque at ut dicta autem harum accusamus modi magnam inventore qui amet explicabo sunt ab maiores nobis aperiam id. Recusandae exercitationem animi quos iusto praesentium beatae porro assumenda libero laudantium at cum ratione illum, quaerat iure consequuntur nesciunt soluta? Fugiat quos quaerat id dolorum voluptatem perferendis consequuntur!</div>
-    <input type="text"/>
+    <h2>heading</h2>
 </body>
 </html>
