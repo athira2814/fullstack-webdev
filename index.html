@@ -12,31 +12,17 @@
             box-sizing: border-box;
             margin: 10px;
         }
-        .background{
-            color: white;
+        div.parent div {
+            background-color: lime;
         }
-        h1.background{
-            background-color: blue;
-        }
-        h2.background{
-            background-color: black;
-        }
-        h2.background#unique{
-            background-color: cyan;
-        }
-        h3.background{
-            background-color: crimson;
-        }
-        span.background{
-            background-color: orange;
-        }
+
     </style>
 </head>
 <body>
-    <h1 class="background">heading one</h1>
-    <h2 class="background">heading two</h2>
-    <h2 id="unique" class="background">second heading two</h2>
-    <h3 class="background">heading three</h3>
-    <span class="background">i'm a span</span>
+    <div class="parent">
+        <div>first div</div>
+        <div>second div</div>
+        <div>third div</div>
+    </div>
 </body>
 </html>
