@@ -1,158 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>card assignment</title>
+    <title>todolist</title>
     <style>
-        * {
-            padding: 0;
+        *{
             margin: 0;
+            padding: 0;
             box-sizing: border-box;
-            text-decoration: none;
-            background-color: #E4E8ED;
         }
-        .card{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content:space-evenly;
-            flex-direction: row;
-            margin-left: 150px ;
-            margin-top: 50px;
-            margin-right: 150px;
+        div.parent{
+            height: 50vh;
+            background-color: black;
+        }
+        div.child{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: olive;
+            animation: 1s move ease;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-delay: .5s;
+        }
+        div.child2{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(201, 201, 148);
+            animation: 1s move ease;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            margin: 10px;
+            animation-delay: 1s;
 
         }
-        .card div{
-            width: 250px;
-            height: 400px;
-            background-color:white;
-            border-radius: 20px;
-            position: relative;
-            margin: 25px;
-        }
-        .card div img{
-            width: 250px;
-            position: absolute;
-            padding: 5px;
-            border-radius: 20px;
-            background-color: white;
 
-        }
-        .card h1{
-            position: absolute;
-            top: 180px;
-            left: 20px;
-            background-color: white;
-            text-align: center;
-        }
-        .card p{
-            position: absolute;
-            top: 230px;
-            left: 10px;
-            background-color: white;
-        }
-        .card button{
-            position: absolute;
-            bottom: 10px;
-            right: 20px;
-            border-radius: 15px;
-            letter-spacing: 1px;
-            background-color:#161520;
-            cursor: pointer;
-            padding: 5px;
-            color: white;
-            border: none;
+        @keyframes move {
+            0% {
+                transform: translateX(0vw);
+            }
+            50% {
+                transform: translate(300px,200px);
+                background-color: brown;
+            }
+            100% {
+                transform: translateX(80vw);
+                background-color: rgb(132, 132, 196);
+            }
+            
         }
     </style>
 </head>
-
 <body>
-    <div class="card">
-        <div>
-            <img src="assets/redfort.jpg" alt="image of paris">
-            <h1>India</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit India</button>
-        </div>
-        <div>
-            <img src="assets/amsterdam.jpg" alt="image of paris">
-            <h1>Amsterdam</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit Amsterdam</button>
-        </div>
-        <div>
-            <img src="assets/canada.jpg"alt="image of paris">
-            <h1>Canada</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit Canada</button>
-        </div>
-        <div>
-            <img src="assets/germany.jpg"alt="image of paris">
-            <h1>Germany</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit Germany</button>
-        </div>
-        <div>
-            <img src="assets/hawaii.jpg"alt="image of paris">
-            <h1>Hawaii</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit Hawaii</button>
-        </div>
-        <div>
-            <img src="assets/newyork.jpg"alt="image of paris">
-            <h1>New York</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit New York</button>
-        </div>
-        <div>
-            <img src="assets/qatar.jpg"alt="image of paris">
-            <h1>Qatar</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit Qatar</button>
-        </div>
-        <div>
-            <img src="assets/scottland.jpg"alt="image of paris">
-            <h1>Scotland</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit Scotland</button>
-        </div>
-        <div>
-            <img src="assets/tokyo.jpg"alt="image of paris">
-            <h1>Tokyo</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit Tokyo</button>
-        </div>
-        <div>
-            <img src="assets/spain.jpg"alt="image of paris">
-            <h1>Spain</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem neque unde quo eaque possimus
-                eligendi non perspiciatis mollitia debitis illum illo animi cum, nulla quibusdam deserunt molestias esse
-                eius!</p>
-            <button type="button">visit Spain</button>
-        </div>
-
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child2"></div>
 
     </div>
 </body>
-
-g</html>
+</html>
