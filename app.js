@@ -1,16 +1,12 @@
- 
-var heading = document.getElementById('heading')
-var body = document.querySelector('body')
-
-heading.innerHTML="i was added by JS"
-// replaces the text
-heading.style="color:red;font-size:2rem"
-// can add styles
-
-heading.classList.add('five')
-heading.classList.remove('one')
-// can add and remove class
-
-body.classList.remove('dark')
-body.classList.add('dark')
-// manual implementation of dark mode
+var list = document.querySelector('ul')
+console.log(list)
+var arr=['go to the gym','cook oatmeal', 'eat']
+arr.push('completed assignment')
+for(var i =0; i< arr.length; i++)
+{
+    var element= document.createElement('li')
+    var textnode= document.createTextNode(arr[i])
+    element.appendChild(textnode)
+    list.appendChild(element)
+}
+// manually appending list elems using js
