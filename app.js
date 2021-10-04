@@ -1,16 +1,16 @@
+ 
 var heading = document.getElementById('heading')
-var para = document.getElementsByClassName('para')
-var tags = document.getElementsByTagName('h1')
-var query = document.querySelector('#heading')
+var body = document.querySelector('body')
 
-console.log(heading)
-console.log(para)
-//----- Here class para is similar to an array-----.
-console.log(para[0])
-// returns the first para element
-console.log(para[1])
-// returns the next element with class para
-console.log(para.length)
-// returns length and gives the specified element just like array but cannot add element into array and also other some array operations cannot be performed
-console.log(tags)
-console.log(query)
+heading.innerHTML="i was added by JS"
+// replaces the text
+heading.style="color:red;font-size:2rem"
+// can add styles
+
+heading.classList.add('five')
+heading.classList.remove('one')
+// can add and remove class
+
+body.classList.remove('dark')
+body.classList.add('dark')
+// manual implementation of dark mode
