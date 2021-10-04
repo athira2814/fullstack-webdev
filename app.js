@@ -1,52 +1,16 @@
-// operators
+var heading = document.getElementById('heading')
+var para = document.getElementsByClassName('para')
+var tags = document.getElementsByTagName('h1')
+var query = document.querySelector('#heading')
 
-// arithmatic operators
-
-var a = 2
-var b = 10
-console.log('a+b =', a+b)
-console.log('a-b =', a-b)
-console.log('a/b =', a/b)
-console.log('a*b =', a*b)
-console.log('a**b =', a**b)
-console.log('a%b =', a%b)
-
-// assignment operator
-
-console.log('b', b)
-b+=10
-console.log('b+10', b)
-b++
-console.log('b++', b)
-b-=1
-console.log('b-=10', b)
-b--
-console.log('b--', b)
-
-var c = 10
-console.log(c++)
-console.log(c)
-// comparison operators
-
-var d = 10
-var e =2
-f='10'
-console.log(d > e)
-console.log(d < e)
-console.log(d >= e)
-console.log(d <= e)
-console.log(d == e)
-console.warn(d == f)
-console.warn(d === f)
-
-// logical operators
-
-console.log('true && true', true && true)
-console.log('false && true', false && true)
-console.log('true && false', true && false)
-console.log('false && false', false && false)
-
-console.log('true || true', true || true)
-console.log('false || true', false || true)
-console.log('true || false', true || false)
-console.log('false || false', false || false)
+console.log(heading)
+console.log(para)
+//----- Here class para is similar to an array-----.
+console.log(para[0])
+// returns the first para element
+console.log(para[1])
+// returns the next element with class para
+console.log(para.length)
+// returns length and gives the specified element just like array but cannot add element into array and also other some array operations cannot be performed
+console.log(tags)
+console.log(query)
