@@ -1,22 +1,24 @@
-// functions
-function add(a=0,b=0)
-{
-    var sum = a+b
-    return sum
-}
-console.log(add(2,5))
+var arr =['one', 'two']
 
-// function expression
-var add = function(a=0,b=0)
-{
-    var sum = a+b
-    return sum
+var callbackFunction = () =>{
+    console.log('three')
 }
-console.log(add(2,5))
-// arrow function
-var add =(a=0,b=0)=>
-{
-    var sum = a+b
-    return sum
+
+arr.forEach(callbackFunction)
+
+// printing all elements in array 
+var arr =['one', 'two']
+
+var callbackFunction = (index,element) =>{
+    console.log(index,element)
 }
-console.log(add(2,5))
+
+arr.forEach(callbackFunction)
+
+// using only forech
+
+var arr =['one', 'two']
+arr.forEach((ele,index)=>{
+    console.log(ele,index)
+}
+)
