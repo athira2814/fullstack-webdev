@@ -1,24 +1,19 @@
-var arr =['one', 'two']
 
-var callbackFunction = () =>{
-    console.log('three')
+var button = document.querySelector('button')
+var input = document.querySelector('input')
+var list = document.querySelector('ul')
+
+const callbackfunction = (event) =>{
+    const inputvalue= input.value
+    const element = document.createElement('li')
+    const textnode = document.createTextNode(inputvalue)
+    element.appendChild(textnode)
+    list.appendChild(element)
+    // console.log(event.target)
+    // console.log(input.value)
 }
 
-arr.forEach(callbackFunction)
+button.addEventListener('click', callbackfunction)
 
-// printing all elements in array 
-var arr =['one', 'two']
-
-var callbackFunction = (index,element) =>{
-    console.log(index,element)
-}
-
-arr.forEach(callbackFunction)
-
-// using only forech
-
-var arr =['one', 'two']
-arr.forEach((ele,index)=>{
-    console.log(ele,index)
-}
-)
+// console.log(event.target) - shows the actual element in which the event occured in console
+// console.log(input.value) - shows the values entered in the input field in console
