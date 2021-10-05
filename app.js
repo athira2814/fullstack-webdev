@@ -1,12 +1,22 @@
-var list = document.querySelector('ul')
-console.log(list)
-var arr=['go to the gym','cook oatmeal', 'eat']
-arr.push('completed assignment')
-for(var i =0; i< arr.length; i++)
+// functions
+function add(a=0,b=0)
 {
-    var element= document.createElement('li')
-    var textnode= document.createTextNode(arr[i])
-    element.appendChild(textnode)
-    list.appendChild(element)
+    var sum = a+b
+    return sum
 }
-// manually appending list elems using js
+console.log(add(2,5))
+
+// function expression
+var add = function(a=0,b=0)
+{
+    var sum = a+b
+    return sum
+}
+console.log(add(2,5))
+// arrow function
+var add =(a=0,b=0)=>
+{
+    var sum = a+b
+    return sum
+}
+console.log(add(2,5))
