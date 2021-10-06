@@ -1,19 +1,38 @@
+const a = document.querySelectorAll('input')[0]
+const b = document.querySelectorAll('input')[1]
+const add = document.querySelector('#add')
+const multiply = document.querySelector('#multiply')
+const resultbox = document.querySelector('.result')
 
-var button = document.querySelector('button')
-var input = document.querySelector('input')
-var list = document.querySelector('ul')
+// const sum = () =>{
+//     const result = parseInt(a.value) + parseInt(b.value)
+//     resultbox.innerHTML = result
+// }
+// const product= () =>{
+//     const result = parseInt(a.value) * parseInt(b.value)
+//     resultbox.innerHTML= result
+// }
+// add.addEventListener('click', sum )
+// multiply.addEventListener('click' , multiply)
 
-const callbackfunction = (event) =>{
-    const inputvalue= input.value
-    const element = document.createElement('li')
-    const textnode = document.createTextNode(inputvalue)
-    element.appendChild(textnode)
-    list.appendChild(element)
-    // console.log(event.target)
-    // console.log(input.value)
+// -----another way------
+
+const calculate=(event , operation)=>{
+    switch(operation){
+        case "add":
+            resultbox.innerHTML=parseInt(a.value) + parseInt(b.value)
+            break
+        case "multiply":
+            resultbox.innerHTML=parseInt(a.value) * parseInt(b.value)
+            break
+        default:
+            resultbox.innerHTML="not a valid operation"
+    }
 }
 
-button.addEventListener('click', callbackfunction)
-
-// console.log(event.target) - shows the actual element in which the event occured in console
-// console.log(input.value) - shows the values entered in the input field in console
+add.addEventListener('click' ,(event)=>{
+    calculate(event,'add')
+})
+multiply.addEventListener('click' ,(event)=>{
+    calculate(event,'multiply')
+})
