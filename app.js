@@ -1,38 +1,17 @@
-const a = document.querySelectorAll('input')[0]
-const b = document.querySelectorAll('input')[1]
-const add = document.querySelector('#add')
-const multiply = document.querySelector('#multiply')
-const resultbox = document.querySelector('.result')
+var arr=[1,2,3,4,5,6,7,8]
+arr.push(9)
+// add the ele at the end
+arr.unshift(12)
+// add the ele at the beginning
+arr.shift(9)
+// removes first ele
+var new_arr =[]
+new_arr.slice(2,5)
+// slice the array and returns duplicate array
+var new_arr= arr.filter((element,index)=>{
+    if(element%2===0)
+        return true
 
-// const sum = () =>{
-//     const result = parseInt(a.value) + parseInt(b.value)
-//     resultbox.innerHTML = result
-// }
-// const product= () =>{
-//     const result = parseInt(a.value) * parseInt(b.value)
-//     resultbox.innerHTML= result
-// }
-// add.addEventListener('click', sum )
-// multiply.addEventListener('click' , multiply)
-
-// -----another way------
-
-const calculate=(event , operation)=>{
-    switch(operation){
-        case "add":
-            resultbox.innerHTML=parseInt(a.value) + parseInt(b.value)
-            break
-        case "multiply":
-            resultbox.innerHTML=parseInt(a.value) * parseInt(b.value)
-            break
-        default:
-            resultbox.innerHTML="not a valid operation"
-    }
-}
-
-add.addEventListener('click' ,(event)=>{
-    calculate(event,'add')
 })
-multiply.addEventListener('click' ,(event)=>{
-    calculate(event,'multiply')
-})
+console.log(arr)
+console.log(new_arr)
