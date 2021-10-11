@@ -1,29 +1,71 @@
-// let is also used to declare a variable
-// gives error because let has block scope
-if(true){
-    let Name ="ethan"
+// eg 1
+let car = {
+    name : "class",
+    manufacturer :"mercedes"
 }
-console.log(Name)
+console.log(car.name)
+console.log(car.manufacturer)
 
-// prints ethan because var has global scope
-if(true){
-    var Name = "ethan"
-}
-console.log(Name)
-
-// prints hai
-if(true){
-    var Name ="hai"
-
-    if (true){
-        console.log(Name)
+// eg 2
+let car = {
+    name : "class",
+    manufacturer :"mercedes",
+    print : function(){
+        console.log("bike")
     }
 }
-// gives error
-if(true){
-    console.log(Name)
+car.print()
 
-    if (true){
-        var Name ="hai"
+// eg 3
+let car = {
+    name : "class",
+    manufacturer :"mercedes",
+    print : function(){
+        console.log(car.name)
     }
 }
+car.print()
+
+// eg 4
+let car = {
+    name : "class",
+    manufacturer :"mercedes",
+    print : function(){
+        console.log(this)
+        console.log(this.name)
+    }
+}
+car.print()
+
+// eg 5
+let car = {
+    name : "class",
+    manufacturer :"mercedes",
+    print : function(){
+        console.log(this.name + ' was manufactured by ' + this.manufacturer)
+    }
+}
+car.print()
+
+// or 
+let car = {
+    name : "class",
+    manufacturer :"mercedes",
+    print : function(){
+    console.log( `${this.name} was manufactured by ${this.manufacturer}`)
+    }
+}
+
+// op undefined when pointer fn used
+let car = {
+    name : "class",
+    manufacturer :"mercedes",
+    print : ()=>{
+    console.log(this) 
+    // above line in arrow fn points to the window object but in normal fn it points to its parent
+    console.log( `${this.name} was manufactured by ${this.manufacturer}`)
+    }
+}
+car.print()
+
+
