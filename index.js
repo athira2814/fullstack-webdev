@@ -1,12 +1,13 @@
-// returns the mkeys and values of object car
-let car = {
-    name : "class",
-    manufacturer :"mercedes",
-    print : function(){
-    console.log( `${this.name} was manufactured by ${this.manufacturer}`)
-    }
-}
-console.log(Object.values(car))
-console.log(Object.keys(car))
-// checks whether car has name in it and returns true
-console.log(car.hasOwnProperty('name'))
+let Name = new Promise((resolve, reject)=>{
+    setTimeout(() => {
+        resolve('athira')
+    },3000)
+})
+// console.log(Name)
+// setTimeout(()=>{
+//     console.log(Name)
+// },4000)
+
+// '.then' automatically executes once the promise resolves or rejects
+
+Name.then(data=>{console.log(data)})
