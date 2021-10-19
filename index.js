@@ -1,7 +1,15 @@
-const fetchdata = async ()=>{
-    const respose = await fetch('https://jsonplaceholder.typicode.com/users')
-    console.log(respose)
-    const data = await respose.json()
-    console.log(data)
+
+const input = document.querySelector('input')
+const button = document.querySelector('button')
+
+const getdata = async(item)=>{
+    console.log(item)
+    let url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
+    console.log(url)
+    const res = await fetch(url)
+    const data = await res.json()
+    console.log(data.hits)
 }
-fetchdata()
+button.addEventListener('click', (e)=>{
+    getdata(input.value)
+})
